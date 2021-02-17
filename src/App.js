@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import { Route } from 'react-router-dom';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+//components ==>
+import CreatePost from './components/create_post';
+import PostEdit from './components/post_edit';
+import PostList from './components/post_list';
+
+const App = () => {
+	return (
+		<>
+			<Route exact path='/list' component={PostList} />
+			<Route path='/edit/:id' component={PostEdit} />
+			<Route exact path='/' component={CreatePost} />
+		</>
+	);
+};
 
 export default App;
