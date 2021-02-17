@@ -1,6 +1,6 @@
 # Evaluacion tecnica.
 
-##Instrucciones:
+###Instrucciones:
 
 -   Clonar el repositorio
 -   npm install
